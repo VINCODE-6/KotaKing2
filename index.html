@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kota King - Fresh Kotas Daily</title>
+    <link rel="stylesheet" href="kotaking.css">
+</head>
+<body class="home-page">
+    <header class="site-header" id="main-header">
+        <div class="header-wrap">
+            <a href="index.html" class="brand" aria-label="The Kota King home">
+                <span class="brand-mark">
+                    <img src="images/logo.png" alt="The Kota King logo">
+                </span>
+                <span class="brand-copy">
+                    <span class="brand-name">The Kota King</span>
+                    <span class="brand-tag">Fresh daily. Built for real cravings.</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <nav class="navbar" id="site-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count" id="cart-count-header" data-cart-count>0</span></a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="coupons.html">Coupons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="demo-banner">
+        Demo storefront concept for portfolio and practice use.
+    </div>
+
+    <main>
+        <section class="hero hero-home">
+            <div class="hero-copy">
+                <span class="store-pill">Cape Town style flavor. Fast WhatsApp ordering.</span>
+                <h1>Hot, stacked, saucy kotas that feel ready to order right now.</h1>
+                <p>
+                    The Kota King keeps it simple: fresh bread, generous fillings, bold spice,
+                    fast pickup, and an easy cart that sends your order straight to WhatsApp.
+                </p>
+                <div class="hero-actions">
+                    <a href="menu.html" class="btn btn-primary">Order From The Menu</a>
+                    <a href="cart.html" class="btn btn-secondary">View Cart</a>
+                </div>
+                <div class="hero-notes">
+                    <span>Fresh Daily</span>
+                    <span>Fast Pickup</span>
+                    <span>Order on WhatsApp</span>
+                </div>
+            </div>
+
+            <div class="hero-panel">
+                <div class="hero-card">
+                    <p class="hero-card-label">Most ordered today</p>
+                    <div class="hero-card-product">
+                        <img src="images/food8.jpeg" alt="Steak Special Kota">
+                        <div>
+                            <strong>Steak Special Kota</strong>
+                            <span>Loaded, saucy and crowd-approved</span>
+                        </div>
+                    </div>
+                    <div class="hero-card-price-row">
+                        <span>From</span>
+                        <strong>R75</strong>
+                    </div>
+                    <a href="menu.html" class="btn btn-dark">See Best Sellers</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip">
+            <div class="trust-card">
+                <h2>Fresh Daily</h2>
+                <p>Every order is made fresh and packed for the kind of lunch or dinner that actually hits.</p>
+            </div>
+            <div class="trust-card">
+                <h2>Fast Pickup</h2>
+                <p>Quick collection flow for busy customers who want flavor without the wait.</p>
+            </div>
+            <div class="trust-card">
+                <h2>WhatsApp Orders</h2>
+                <p>Add to cart, review your order, and send it directly through a clean WhatsApp checkout.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <span class="section-kicker">Best Sellers</span>
+                <h2 class="section-title">Popular picks from the kitchen</h2>
+                <p class="section-text">A few of the kotas customers keep coming back for.</p>
+            </div>
+
+            <div class="product-grid featured-grid">
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food5.jpeg" alt="Russian and Chips Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">Popular</span>
+                            <span class="badge">Big Portion</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Russian and Chips Kota</h3>
+                        <p>Classic comfort with a filling Russian, hot chips and the full kota feel.</p>
+                        <div class="product-meta">
+                            <span>Freshly built</span>
+                            <span>Pickup favorite</span>
+                        </div>
+                        <div class="price-row">
+                            <strong>R65</strong>
+                            <button class="btn btn-accent" onclick="addToCart('russian-chips', 'Russian and Chips Kota', 65)">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food8.jpeg" alt="Steak Special Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">Best Seller</span>
+                            <span class="badge badge-spicy">Bold Flavor</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Steak Special Kota</h3>
+                        <p>A bigger, richer option for hungry customers who want something serious.</p>
+                        <div class="product-meta">
+                            <span>Loaded special</span>
+                            <span>Weekend favorite</span>
+                        </div>
+                        <div class="price-row">
+                            <strong>R75</strong>
+                            <button class="btn btn-accent" onclick="addToCart('steak-special', 'Steak Special Kota', 75)">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food7.jpeg" alt="Spicy Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-spicy">Spicy</span>
+                            <span class="badge">Street favorite</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Spicy Kota</h3>
+                        <p>For customers who want a hotter bite with that proper kota kick.</p>
+                        <div class="product-meta">
+                            <span>Heat lovers</span>
+                            <span>Fresh atchar edge</span>
+                        </div>
+                        <div class="price-row">
+                            <strong>R58</strong>
+                            <button class="btn btn-accent" onclick="addToCart('spicy-kota', 'Spicy Kota', 58)">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food13.jpeg" alt="King Size Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">King Pick</span>
+                            <span class="badge">For sharing</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>King Size Kota</h3>
+                        <p>The oversized option when one regular kota is just not enough.</p>
+                        <div class="product-meta">
+                            <span>Large appetite</span>
+                            <span>Family pickup</span>
+                        </div>
+                        <div class="price-row">
+                            <strong>R85</strong>
+                            <button class="btn btn-accent" onclick="addToCart('king-size', 'King Size Kota', 85)">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="split-panel">
+                <div class="split-media">
+                    <img src="images/overviewimage.jpeg" alt="Freshly prepared kota spread">
+                </div>
+                <div class="split-content">
+                    <span class="section-kicker">Why customers come back</span>
+                    <h2 class="section-title left">A small business store feel, without the fuss</h2>
+                    <p class="section-text left">
+                        This site is built to feel like a real ordering experience: browse quickly,
+                        add your picks, review your total, and send your checkout on WhatsApp without losing your cart.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Simple online ordering flow with cart storage saved in your browser.</li>
+                        <li>Fast collection notes so customers know what to expect before they message.</li>
+                        <li>Warm, food-first design that feels lively instead of generic.</li>
+                    </ul>
+                    <div class="info-banner">
+                        Collection is usually fastest. For delivery requests, send your area on WhatsApp before checkout confirmation.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft">
+            <div class="section-heading">
+                <span class="section-kicker">Customer Talk</span>
+                <h2 class="section-title">Real small-business energy</h2>
+            </div>
+            <div class="quote-grid">
+                <article class="quote-card">
+                    <p>"The Russian and chips kota is my lunch default now. Big flavor, quick service."</p>
+                    <strong>Lwazi - Rondebosch</strong>
+                </article>
+                <article class="quote-card">
+                    <p>"Easy to order, easy to collect, and the spicy option actually has proper heat."</p>
+                    <strong>Thandi - Athlone</strong>
+                </article>
+                <article class="quote-card">
+                    <p>"The WhatsApp checkout is clean and the portions are worth it. Good value."</p>
+                    <strong>Shaun - Mitchells Plain</strong>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="main-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>The Kota King</h3>
+                <p>Hot, fresh, satisfying kota orders with a simple pickup-first online flow.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="menu.html">Browse the menu</a>
+                <a href="cart.html">Open your cart</a>
+                <a href="coupons.html">See offers</a>
+            </div>
+            <div>
+                <h3>Ordering</h3>
+                <p>WhatsApp checkout</p>
+                <p>Fast pickup support</p>
+                <p>Fresh daily service</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <a href="contact.html">Contact page</a>
+                <a href="locations.html">Main branch</a>
+                <a href="https://wa.me/123456789" target="_blank" rel="noreferrer">WhatsApp us</a>
+            </div>
+        </div>
+        <p class="footer-note">Copyright 2026 The Kota King. Made with pride in Cape Town.</p>
+    </footer>
+
+    <script src="kotaking.js"></script>
+</body>
+</html>

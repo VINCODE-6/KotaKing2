@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - The Kota King</title>
+    <link rel="stylesheet" href="kotaking.css">
+</head>
+<body>
+    <header class="site-header" id="main-header">
+        <div class="header-wrap">
+            <a href="index.html" class="brand" aria-label="The Kota King home">
+                <span class="brand-mark">
+                    <img src="images/logo.png" alt="The Kota King logo">
+                </span>
+                <span class="brand-copy">
+                    <span class="brand-name">The Kota King</span>
+                    <span class="brand-tag">Fresh daily. Built for real cravings.</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <nav class="navbar" id="site-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count" id="cart-count-header" data-cart-count>0</span></a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="coupons.html">Coupons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero compact-hero">
+            <div class="page-hero-copy">
+                <span class="store-pill">Simple online ordering</span>
+                <h1>Pick your kota, add it to cart, and send your order on WhatsApp.</h1>
+                <p>All items stay beginner-friendly to edit, and every Add button still uses the same cart system.</p>
+            </div>
+        </section>
+
+        <section class="service-strip">
+            <div class="service-card">
+                <h2>Fresh Daily</h2>
+                <p>Prepared fresh for the day so your order feels worth the trip.</p>
+            </div>
+            <div class="service-card">
+                <h2>Collection Friendly</h2>
+                <p>Most customers collect. Use the cart notes for timing or special requests.</p>
+            </div>
+            <div class="service-card">
+                <h2>WhatsApp Ready</h2>
+                <p>Your final order message is generated directly from the cart summary.</p>
+            </div>
+        </section>
+
+        <section class="section menu-section">
+            <div class="section-heading">
+                <span class="section-kicker">Full Menu</span>
+                <h2 class="section-title">Modern product cards for every order</h2>
+                <p class="section-text">Popular tags, spicy notes, and clean pricing make the menu easier to scan.</p>
+            </div>
+
+            <div class="product-grid menu-products">
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food1.jpeg" alt="Kota Classic">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">Classic</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Kota Classic</h3>
+                        <p>Simple, satisfying and ideal for a quick everyday order.</p>
+                        <div class="product-meta"><span>Starter pick</span><span>Fresh daily</span></div>
+                        <div class="price-row"><strong>R35</strong><button class="btn btn-accent" onclick="addToCart('kota-classic', 'Kota Classic', 35)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food2.jpeg" alt="Polony and Cheese Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">Popular</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Polony and Cheese Kota</h3>
+                        <p>Soft, cheesy and familiar with the kind of comfort customers love.</p>
+                        <div class="product-meta"><span>Everyday favorite</span><span>Cheesy bite</span></div>
+                        <div class="price-row"><strong>R48</strong><button class="btn btn-accent" onclick="addToCart('polony-cheese', 'Polony and Cheese Kota', 48)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food3.jpeg" alt="Double Stack Kota">
+                        <div class="product-badges">
+                            <span class="badge">Filling</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Double Stack Kota</h3>
+                        <p>Built for customers who want a little more substance in every bite.</p>
+                        <div class="product-meta"><span>Big appetite</span><span>Layered flavor</span></div>
+                        <div class="price-row"><strong>R55</strong><button class="btn btn-accent" onclick="addToCart('double-stack', 'Double Stack Kota', 55)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food4.jpeg" alt="Chicken Kota">
+                        <div class="product-badges">
+                            <span class="badge">Savory</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Chicken Kota</h3>
+                        <p>A juicy, easy choice with comforting flavor and a softer profile.</p>
+                        <div class="product-meta"><span>Lunch favorite</span><span>Family friendly</span></div>
+                        <div class="price-row"><strong>R52</strong><button class="btn btn-accent" onclick="addToCart('chicken-kota', 'Chicken Kota', 52)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food5.jpeg" alt="Russian and Chips Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">Best Seller</span>
+                            <span class="badge">Big Portion</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Russian and Chips Kota</h3>
+                        <p>A proper hearty option with that familiar kota shop energy.</p>
+                        <div class="product-meta"><span>Fast seller</span><span>Pickup favorite</span></div>
+                        <div class="price-row"><strong>R65</strong><button class="btn btn-accent" onclick="addToCart('russian-chips', 'Russian and Chips Kota', 65)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food6.jpeg" alt="Beef and Cheese Kota">
+                        <div class="product-badges">
+                            <span class="badge">Rich</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Beef and Cheese Kota</h3>
+                        <p>Beefy, cheesy and fuller-bodied for customers who want depth.</p>
+                        <div class="product-meta"><span>Loaded taste</span><span>Value meal</span></div>
+                        <div class="price-row"><strong>R70</strong><button class="btn btn-accent" onclick="addToCart('beef-cheese', 'Beef and Cheese Kota', 70)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food7.jpeg" alt="Spicy Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-spicy">Spicy</span>
+                            <span class="badge">Hot pick</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Spicy Kota</h3>
+                        <p>For customers who like a louder, hotter and more energetic bite.</p>
+                        <div class="product-meta"><span>Heat lovers</span><span>Atchar edge</span></div>
+                        <div class="price-row"><strong>R58</strong><button class="btn btn-accent" onclick="addToCart('spicy-kota', 'Spicy Kota', 58)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food8.jpeg" alt="Steak Special Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">Top Order</span>
+                            <span class="badge">Special</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Steak Special Kota</h3>
+                        <p>One of the strongest menu picks when you want a more premium feel.</p>
+                        <div class="product-meta"><span>Weekend star</span><span>Loaded special</span></div>
+                        <div class="price-row"><strong>R75</strong><button class="btn btn-accent" onclick="addToCart('steak-special', 'Steak Special Kota', 75)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food9.jpeg" alt="Veg Kota">
+                        <div class="product-badges">
+                            <span class="badge">Light</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Veg Kota</h3>
+                        <p>A lighter kota option that still keeps the store's comfort-food feel.</p>
+                        <div class="product-meta"><span>Vegetable option</span><span>Simple order</span></div>
+                        <div class="price-row"><strong>R40</strong><button class="btn btn-accent" onclick="addToCart('veg-kota', 'Veg Kota', 40)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food10.jpeg" alt="Boerewors Kota">
+                        <div class="product-badges">
+                            <span class="badge">Grill style</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Boerewors Kota</h3>
+                        <p>Smokier flavor with a more braai-inspired energy in the mix.</p>
+                        <div class="product-meta"><span>Street style</span><span>Filling meal</span></div>
+                        <div class="price-row"><strong>R62</strong><button class="btn btn-accent" onclick="addToCart('boerewors-kota', 'Boerewors Kota', 62)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food11.jpeg" alt="Egg and Bacon Kota">
+                        <div class="product-badges">
+                            <span class="badge">Brunch vibe</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Egg and Bacon Kota</h3>
+                        <p>Comforting breakfast-style flavor packed into a proper kota build.</p>
+                        <div class="product-meta"><span>Morning bite</span><span>Comfort pick</span></div>
+                        <div class="price-row"><strong>R50</strong><button class="btn btn-accent" onclick="addToCart('egg-bacon', 'Egg and Bacon Kota', 50)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food12.jpeg" alt="Atchar Bomb Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-spicy">Tangy</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Atchar Bomb</h3>
+                        <p>Sharp, punchy and built for customers who want a more vibrant bite.</p>
+                        <div class="product-meta"><span>Flavor kick</span><span>Store favorite</span></div>
+                        <div class="price-row"><strong>R45</strong><button class="btn btn-accent" onclick="addToCart('atchar-bomb', 'Atchar Bomb', 45)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food13.jpeg" alt="King Size Kota">
+                        <div class="product-badges">
+                            <span class="badge badge-popular">King Pick</span>
+                            <span class="badge">Shareable</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>King Size Kota</h3>
+                        <p>Oversized and satisfying when the order needs to go all in.</p>
+                        <div class="product-meta"><span>Large appetite</span><span>Heavy hitter</span></div>
+                        <div class="price-row"><strong>R85</strong><button class="btn btn-accent" onclick="addToCart('king-size', 'King Size Kota', 85)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food14.jpeg" alt="Mini Kota">
+                        <div class="product-badges">
+                            <span class="badge">Quick bite</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Mini Kota</h3>
+                        <p>A smaller option for lighter cravings or a quick snack stop.</p>
+                        <div class="product-meta"><span>Budget friendly</span><span>Snack size</span></div>
+                        <div class="price-row"><strong>R28</strong><button class="btn btn-accent" onclick="addToCart('mini-kota', 'Mini Kota', 28)">Add to Cart</button></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="images/food15.jpeg" alt="Cheese Melt Kota">
+                        <div class="product-badges">
+                            <span class="badge">Melty</span>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <h3>Cheese Melt Kota</h3>
+                        <p>Soft, rich and extra comforting with a stronger cheese finish.</p>
+                        <div class="product-meta"><span>Cheese lovers</span><span>Comfort meal</span></div>
+                        <div class="price-row"><strong>R55</strong><button class="btn btn-accent" onclick="addToCart('cheese-melt', 'Cheese Melt Kota', 55)">Add to Cart</button></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="main-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>The Kota King</h3>
+                <p>Hot, fresh, satisfying kota orders with a simple pickup-first online flow.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Your cart</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div>
+                <h3>Need Help?</h3>
+                <p>Use the cart for checkout</p>
+                <p>Message us on WhatsApp</p>
+                <p>Pickup notes welcome</p>
+            </div>
+            <div>
+                <h3>Visit</h3>
+                <a href="locations.html">Find the branch</a>
+                <a href="coupons.html">Current offers</a>
+                <a href="https://wa.me/123456789" target="_blank" rel="noreferrer">WhatsApp us</a>
+            </div>
+        </div>
+        <p class="footer-note">Copyright 2026 The Kota King. Made with pride in Cape Town.</p>
+    </footer>
+
+    <script src="kotaking.js"></script>
+</body>
+</html>

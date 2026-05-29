@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - The Kota King</title>
+    <link rel="stylesheet" href="kotaking.css">
+</head>
+<body>
+    <header class="site-header" id="main-header">
+        <div class="header-wrap">
+            <a href="index.html" class="brand" aria-label="The Kota King home">
+                <span class="brand-mark">
+                    <img src="images/logo.png" alt="The Kota King logo">
+                </span>
+                <span class="brand-copy">
+                    <span class="brand-name">The Kota King</span>
+                    <span class="brand-tag">Fresh daily. Built for real cravings.</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <nav class="navbar" id="site-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cart.html" class="active">Cart <span class="cart-count" id="cart-count-header" data-cart-count>0</span></a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="coupons.html">Coupons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero compact-hero">
+            <div class="page-hero-copy">
+                <span class="store-pill">Review before checkout</span>
+                <h1>Your cart is ready for a cleaner WhatsApp order flow.</h1>
+                <p>Adjust quantities, add collection notes, and send the final order message directly from this page.</p>
+            </div>
+        </section>
+
+        <section class="cart-layout">
+            <div class="cart-grid">
+                <div class="cart-main-panel">
+                    <div class="panel-heading">
+                        <h2>Items in your order</h2>
+                        <p>Everything added from the menu stays saved in your browser.</p>
+                    </div>
+
+                    <div id="cart-items-container"></div>
+
+                    <div id="empty-cart-message" class="empty-state" style="display: none;">
+                        <h3>Your cart is empty</h3>
+                        <p>Browse the menu and add a few kotas to start your order.</p>
+                        <a href="menu.html" class="btn btn-primary">Browse the Menu</a>
+                    </div>
+                </div>
+
+                <aside class="cart-summary-panel" id="cart-summary-block" style="display: none;">
+                    <div class="panel-heading">
+                        <h2>Checkout summary</h2>
+                        <p>Keep it simple: confirm the order and send it on WhatsApp.</p>
+                    </div>
+
+                    <div class="summary-list" id="cart-lines-summary"></div>
+
+                    <div class="cart-summary-row">
+                        <span>Total items</span>
+                        <strong id="cart-total-qty">0</strong>
+                    </div>
+                    <div class="cart-total-row">
+                        <span>Total</span>
+                        <strong id="cart-total">R0.00</strong>
+                    </div>
+
+                    <div class="form-stack">
+                        <label class="field">
+                            <span>Order type</span>
+                            <select id="order-type">
+                                <option value="Collection">Collection</option>
+                                <option value="Delivery enquiry">Delivery enquiry</option>
+                            </select>
+                        </label>
+
+                        <label class="field">
+                            <span>Preferred time</span>
+                            <input type="text" id="pickup-time" placeholder="ASAP or e.g. 18:30">
+                        </label>
+
+                        <label class="field">
+                            <span>Order note</span>
+                            <textarea id="checkout-note" rows="4" placeholder="Coupon code, extra request, landmark or collection note"></textarea>
+                        </label>
+                    </div>
+
+                    <div class="info-banner">
+                        Collection is usually the fastest option. Ask on WhatsApp first if you need delivery outside the branch area.
+                    </div>
+
+                    <button class="btn btn-primary btn-full" id="whatsapp-checkout-btn" type="button">Send Order on WhatsApp</button>
+                    <button class="btn btn-secondary btn-full" id="clear-cart-btn" type="button">Clear Cart</button>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="main-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>The Kota King</h3>
+                <p>Hot, fresh, satisfying kota orders with a simple pickup-first online flow.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="menu.html">Menu</a>
+                <a href="coupons.html">Offers</a>
+                <a href="contact.html">Support</a>
+            </div>
+            <div>
+                <h3>Checkout Tips</h3>
+                <p>Add a pickup time if you have one</p>
+                <p>Include coupon codes in the note</p>
+                <p>Double-check your quantity before sending</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <a href="locations.html">Branch location</a>
+                <a href="https://wa.me/123456789" target="_blank" rel="noreferrer">WhatsApp us</a>
+                <a href="contact.html">Message form</a>
+            </div>
+        </div>
+        <p class="footer-note">Copyright 2026 The Kota King. Made with pride in Cape Town.</p>
+    </footer>
+
+    <script src="kotaking.js"></script>
+</body>
+</html>
